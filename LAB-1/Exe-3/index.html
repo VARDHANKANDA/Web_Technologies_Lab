@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #FFF8DC; /* Cornsilk background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px; /* Padding for smaller screens */
+        }
+
+        form {
+            background-color: #FFFFF0; /* Ivory Form Background */
+            border: 2px solid #DAA520; /* Gold Border */
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #B8860B; /* Dark Gold */
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #3e2723; /* Dark Brown */
+        }
+
+        /* General Input Styling */
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d2b48c; /* Soft Brown */
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #fffbf0;
+            font-size: 14px;
+        }
+
+        /* Terms and Conditions Section */
+        .terms-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 10px;
+            accent-color: #DAA520; /* Sets the checkbox check color to Gold */
+            width: auto; /* Overrides the 100% width set above */
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #DAA520;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #B8860B; /* Darker Gold */
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <h2>Create Account</h2>
+
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Vardhan Kanda" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="vardhan@gmail.com" required>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{10}" title="Please enter a 10-digit number" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+        <label for="profile_pic">Choose Profile Picture</label>
+        <input type="file" id="profile_pic" name="profile_pic" accept="image/png, image/jpeg">
+
+        <div class="terms-container">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms" style="margin: 0; font-weight: normal;">I accept the Terms & Conditions</label>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+</html>

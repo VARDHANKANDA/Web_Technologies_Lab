@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marksheet</title>
+    <style>
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+        }
+
+        th, td {
+            /* Changed border color to a soft brown to match the gold */
+            border: 1px solid #d2b48c; 
+            padding: 12px;
+            text-align: center;
+            color: #3e2723; /* Dark brown text for better readability on cream */
+        }
+
+        /* --- COLOR SETTINGS START HERE --- */
+
+        /* Header Row: Rich Gold */
+        thead {
+            background-color: #DAA520; /* Goldenrod */
+            color: #ffffff;            /* White Text */
+        }
+
+        /* Standard Row: Light Cream/Ivory */
+        tbody tr {
+            background-color: #FFFFF0; /* Ivory */
+        }
+
+        /* Zebra Striping: Slightly Darker Cream */
+        tbody tr:nth-child(even) {
+            background-color: #FFF8DC; /* Cornsilk */
+        }
+
+        /* Hover Effect: Soft Gold */
+        tbody tr:hover {
+            background-color: #F0E68C; /* Khaki */
+            cursor: pointer;
+        }
+
+        /* --- COLOR SETTINGS END HERE --- */
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center; color: #B8860B; font-family: sans-serif;">Student Marksheet</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Web Technologies</th>
+                <th>DSA</th>
+                <th>Deep Learning</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>23BCE8389</td>
+                <td>Kanda Saptha Sri Vardhan</td>
+                <td>85</td>
+                <td>90</td>
+                <td>88</td>
+                <td>263</td>
+            </tr>
+            <tr>
+                <td>23BCE8390</td>
+                <td>CP Tejeswar</td>
+                <td>78</td>
+                <td>82</td>
+                <td>80</td>
+                <td>240</td>
+            </tr>
+            <tr>
+                <td>23BCE8391</td>
+                <td>S. Shashank</td>
+                <td>92</td>
+                <td>95</td>
+                <td>98</td>
+                <td>285</td>
+            </tr>
+            <tr>
+                <td>23BCE8392</td>
+                <td>R Rohit</td>
+                <td>75</td>
+                <td>70</td>
+                <td>72</td>
+                <td>217</td>
+            </tr>
+            <tr>
+                <td>23BCE8393</td>
+                <td>K. Krishna Teja</td>
+                <td>88</td>
+                <td>85</td>
+                <td>90</td>
+                <td>263</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

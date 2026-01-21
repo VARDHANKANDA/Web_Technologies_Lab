@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+body {
+  background: #f4f7ff;
+  color: #111827;
+  padding: 18px;
+}
+
+/* Header */
+.top {
+  max-width: 900px;
+  margin: auto;
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+  background: linear-gradient(135deg, #2563eb, #9333ea);
+  color: white;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.top h1 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.top p {
+  opacity: 0.95;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 18px auto;
+}
+
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+/* Progress */
+.progress-wrap {
+  margin-bottom: 16px;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  color: #475569;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  height: 10px;
+  width: 100%;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 25%;
+  background: #2563eb;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+/* Stages */
+.stage {
+  display: none;
+  padding: 10px 0;
+}
+
+.stage.active {
+  display: block;
+}
+
+.stage h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #1e293b;
+}
+
+/* Inputs */
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #111827;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #2563eb;
+}
+
+.invalid {
+  border-color: #dc2626 !important;
+}
+
+.err {
+  display: block;
+  height: 14px;
+  font-size: 12px;
+  margin-top: 4px;
+  color: #dc2626;
+}
+
+/* Review box */
+.review {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  border-radius: 14px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.7;
+}
+
+/* Checkbox */
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.check input {
+  width: auto;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-weight: 800;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.gray {
+  background: #94a3b8;
+}
+
+.gray:hover {
+  background: #64748b;
+}
+
+.green {
+  background: #16a34a;
+}
+
+.green:hover {
+  background: #15803d;
+}
+
+.hide {
+  display: none;
+}
+
+.success {
+  margin-top: 14px;
+  text-align: center;
+  color: #16a34a;
+  font-weight: 800;
+}

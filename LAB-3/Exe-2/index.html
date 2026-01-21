@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Shopping Cart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header class="top">
+    <div class="top-inner">
+      <div>
+        <h1>SmartCart</h1>
+        <p>Shop smarter with live discounts 💡</p>
+      </div>
+
+      <div class="badge">
+        <span id="cartCount">0</span>
+        <small>Items in Cart</small>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- LEFT: Products -->
+    <section class="panel">
+      <div class="panel-title">
+        <h2>🛍️ Products</h2>
+        <p>Select items by category</p>
+      </div>
+
+      <div id="productsContainer"></div>
+    </section>
+
+    <!-- RIGHT: Cart + Coupon + Summary -->
+    <aside class="side">
+
+      <!-- Coupon -->
+      <div class="panel small">
+        <h2>🎟️ Coupon</h2>
+        <div class="coupon">
+          <input type="text" id="couponInput" placeholder="SAVE10 / HEAD5" />
+          <button id="applyCouponBtn">Apply</button>
+        </div>
+        <small id="couponMsg"></small>
+      </div>
+
+      <!-- Cart -->
+      <div class="panel">
+        <h2>🛒 Your Cart</h2>
+        <div id="cartList"></div>
+        <p id="emptyCart" class="empty">Your cart is empty. Add items 👈</p>
+      </div>
+
+      <!-- Summary -->
+      <div class="panel small">
+        <h2>🧾 Bill Summary</h2>
+
+        <div class="summary">
+          <div class="row">
+            <span>Subtotal</span>
+            <b id="subTotal">₹0</b>
+          </div>
+          <div class="row">
+            <span>Discount</span>
+            <b class="red" id="discountTotal">₹0</b>
+          </div>
+          <div class="row total">
+            <span>Total</span>
+            <b id="finalTotal">₹0</b>
+          </div>
+        </div>
+
+        <div class="rules">
+          <b>Discount Rules:</b>
+          <ul>
+            <li>Bulk: Qty ≥ 3 → 10% OFF on item</li>
+            <li>Laptops → 5% OFF always</li>
+            <li>6PM–9PM → Extra 5% OFF cart</li>
+            <li>Coupons: SAVE10, HEAD5</li>
+          </ul>
+        </div>
+      </div>
+
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

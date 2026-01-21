@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Activity Monitor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top">
+    <h1>🕵️ Real-Time User Activity Monitor</h1>
+    <p>Tracks clicks, keys, focus events (capture + bubble)</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Controls -->
+    <section class="card controls">
+      <button id="resetBtn">Reset Log</button>
+      <button id="exportBtn">Export Log</button>
+      <div class="stats">
+        <span>Clicks: <b id="clickCount">0</b></span>
+        <span>Keys: <b id="keyCount">0</b></span>
+        <span>Focus: <b id="focusCount">0</b></span>
+      </div>
+    </section>
+
+    <!-- Warning -->
+    <section class="card warning-box" id="warningBox">
+      ⚠️ Suspicious Activity Detected: Too many clicks in short time!
+    </section>
+
+    <!-- Test Area -->
+    <section class="card test-area">
+      <h2>Test Area</h2>
+      <p>Interact here to generate events:</p>
+
+      <div class="grid">
+        <button class="btn">Click Me</button>
+        <button class="btn">Another Button</button>
+
+        <input class="input" type="text" placeholder="Type something..." />
+        <input class="input" type="email" placeholder="Focus here..." />
+
+        <div class="box">
+          <p><b>Nested Box</b> (Try clicking inside)</p>
+          <button class="btn small">Inner Button</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Log -->
+    <section class="card">
+      <h2>Activity Log</h2>
+      <div id="logList" class="log"></div>
+      <p class="empty" id="emptyMsg">No activity yet...</p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

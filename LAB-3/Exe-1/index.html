@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adaptive Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2>Registration Form</h2>
+
+    <form id="regForm" novalidate>
+
+      <div class="field">
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter full name">
+        <small class="error-text" id="nameMsg">Name must be at least 3 characters</small>
+      </div>
+
+      <div class="field">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="example@gmail.com">
+        <small class="error-text" id="emailMsg">Email domain not allowed for this role</small>
+        <small class="hint" id="emailHint"></small>
+      </div>
+
+      <div class="field">
+        <label>Age</label>
+        <input type="number" id="age" placeholder="Enter age">
+        <small class="error-text" id="ageMsg">Age is not valid for this role</small>
+      </div>
+
+      <div class="field">
+        <label>Role</label>
+        <select id="role">
+          <option value="">-- Select Role --</option>
+          <option value="student">Student</option>
+          <option value="teacher">Teacher</option>
+          <option value="admin">Admin</option>
+        </select>
+        <small class="error-text" id="roleMsg">Please select a role</small>
+      </div>
+
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+        <small class="error-text" id="passMsg">Password is too weak for this role</small>
+        <small class="hint" id="passHint"></small>
+      </div>
+
+      <div class="field">
+        <label>Confirm Password</label>
+        <input type="password" id="confirm" placeholder="Re-enter password">
+        <small class="error-text" id="confirmMsg">Passwords do not match</small>
+      </div>
+
+      <div class="field hidden" id="skillsBox">
+        <label>Skills (comma separated)</label>
+        <textarea id="skills" placeholder="HTML, CSS, JavaScript"></textarea>
+        <small class="error-text" id="skillsMsg">Skills are required for Teacher/Admin</small>
+      </div>
+
+      <button id="submitBtn" disabled>Register</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+  padding: 20px;
+}
+
+/* Header */
+.top {
+  max-width: 900px;
+  margin: auto;
+  padding: 18px;
+  border-radius: 18px;
+  text-align: center;
+  background: linear-gradient(135deg, #1a8a26, #9fe492);
+  color: white;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.top h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.top p {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 18px auto;
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.desc {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* Question Box */
+.question {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 14px;
+  transition: 0.2s;
+}
+
+.question:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.q-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.q-desc {
+  font-size: 13px;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  outline: none;
+  transition: 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+}
+
+.options {
+  display: grid;
+  gap: 8px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+}
+
+.option:hover {
+  border-color: #2563eb;
+}
+
+/* Errors */
+.error-msg {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #dc2626;
+  display: none;
+  font-weight: 600;
+}
+
+.error-msg.show {
+  display: block;
+}
+
+.invalid-input {
+  border-color: #dc2626 !important;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 16px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* Success */
+.success-msg {
+  margin-top: 12px;
+  color: #16a34a;
+  font-weight: 800;
+  text-align: center;
+}

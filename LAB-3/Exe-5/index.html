@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Step Form Workflow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top">
+    <h1>🧩 Multi-Stage Form Workflow</h1>
+    <p>Complete each stage before moving forward</p>
+  </header>
+
+  <main class="container">
+    <form id="multiForm" class="card">
+
+      <!-- Progress -->
+      <div class="progress-wrap">
+        <div class="progress-text">
+          Step <b id="stepNum">1</b> of <b>4</b>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <!-- STAGE 1 -->
+      <section class="stage active" data-step="1">
+        <h2>Stage 1: Basic Details</h2>
+
+        <label>Full Name</label>
+        <input type="text" id="fullName" placeholder="Enter your name" />
+        <small class="err" id="nameErr"></small>
+
+        <label>Email</label>
+        <input type="text" id="email" placeholder="example@gmail.com" />
+        <small class="err" id="emailErr"></small>
+      </section>
+
+      <!-- STAGE 2 -->
+      <section class="stage" data-step="2">
+        <h2>Stage 2: Account Setup</h2>
+
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Min 8 chars, 1 number" />
+        <small class="err" id="passErr"></small>
+
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Re-enter password" />
+        <small class="err" id="confirmErr"></small>
+      </section>
+
+      <!-- STAGE 3 -->
+      <section class="stage" data-step="3">
+        <h2>Stage 3: Profile Info</h2>
+
+        <label>Age</label>
+        <input type="number" id="age" placeholder="Enter age" />
+        <small class="err" id="ageErr"></small>
+
+        <label>Gender</label>
+        <select id="gender">
+          <option value="">Select</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <small class="err" id="genderErr"></small>
+      </section>
+
+      <!-- STAGE 4 -->
+      <section class="stage" data-step="4">
+        <h2>Stage 4: Confirmation</h2>
+
+        <div class="review" id="reviewBox"></div>
+
+        <label class="check">
+          <input type="checkbox" id="terms" />
+          I agree to the Terms & Conditions
+        </label>
+        <small class="err" id="termsErr"></small>
+      </section>
+
+      <!-- Navigation Buttons -->
+      <div class="nav">
+        <button type="button" id="prevBtn" class="btn gray">Back</button>
+        <button type="button" id="nextBtn" class="btn">Next</button>
+        <button type="submit" id="submitBtn" class="btn green hide">Submit</button>
+      </div>
+
+      <p id="successMsg" class="success"></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

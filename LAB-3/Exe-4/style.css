@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+body {
+  background: #f4f7ff;
+  color: #111827;
+  padding: 18px;
+}
+
+.top {
+  max-width: 1000px;
+  margin: auto;
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+  background: linear-gradient(135deg, #2563eb, #9333ea);
+  color: white;
+}
+
+.top h1 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.top p {
+  opacity: 0.95;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 18px auto;
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+#resetBtn {
+  background: #ef4444;
+  color: white;
+}
+
+#resetBtn:hover {
+  background: #dc2626;
+}
+
+#exportBtn {
+  background: #16a34a;
+  color: white;
+}
+
+#exportBtn:hover {
+  background: #15803d;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+  color: #374151;
+}
+
+.warning-box {
+  display: none;
+  background: #fff7ed;
+  border: 1px solid #fdba74;
+  color: #9a3412;
+  font-weight: 700;
+}
+
+.warning-box.show {
+  display: block;
+}
+
+.test-area h2 {
+  margin-bottom: 6px;
+}
+
+.grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.btn {
+  background: #2563eb;
+  color: white;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.btn.small {
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #2563eb;
+}
+
+.box {
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px dashed #94a3b8;
+  background: #f8fafc;
+}
+
+.log {
+  max-height: 280px;
+  overflow-y: auto;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.log-item {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.log-item:last-child {
+  border-bottom: none;
+}
+
+.tag {
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.time {
+  color: #6b7280;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.empty {
+  margin-top: 10px;
+  color: #6b7280;
+}

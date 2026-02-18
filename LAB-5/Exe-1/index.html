@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Employee Management System</h1>
+    
+    <div class="form-container">
+        <h2 id="formTitle">Add Employee</h2>
+        <div class="form-group">
+            <input type="hidden" id="editId">
+            <input type="text" id="empName" placeholder="Name (e.g., Vardhan Reddy)">
+            <input type="text" id="empDept" placeholder="Department">
+            <input type="number" id="empSalary" placeholder="Salary (₹)">
+            <button onclick="saveEmployee()">Save</button>
+            <button onclick="cancelEdit()" id="cancelBtn" style="display:none;">Cancel</button>
+        </div>
+    </div>
+
+    <div id="message"></div>
+
+    <table id="employeeTable">
+        <thead>
+            <tr><th>ID</th><th>Name</th><th>Department</th><th>Salary</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="employeeTableBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

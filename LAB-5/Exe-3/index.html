@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Record System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎓 Student Record System</h1>
+
+    <div class="form-section">
+        <input type="number" id="studentId" placeholder="Student ID">
+        <input type="text" id="studentName" placeholder="Name">
+        <input type="text" id="studentCourse" placeholder="Course">
+        <input type="number" id="studentMarks" placeholder="Marks">
+
+        <button onclick="addStudent()">Add</button>
+        <button onclick="updateStudent()">Update</button>
+        <button onclick="deleteStudent()">Delete</button>
+    </div>
+
+    <div id="message"></div>
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <button class="load-btn" onclick="loadStudents()">Load Students</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

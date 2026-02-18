@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee id="1">
+        <name>Vardhan</name>
+        <department>Software Development</department>
+        <salary>850000</salary>
+    </employee>
+    <employee id="2">
+        <name>Manoj</name>
+        <department>Human Resources</department>
+        <salary>720000</salary>
+    </employee>
+    <employee id="3">
+        <name>Jeswanth</name>
+        <department>Quality Assurance</department>
+        <salary>680000</salary>
+    </employee>
+</employees>

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Vardhan",
+    "course": "Computer Science",
+    "marks": 95
+  },
+  {
+    "id": 2,
+    "name": "Priya Patel",
+    "course": "Information Technology",
+    "marks": 90
+  },
+  {
+    "id": 3,
+    "name": "Rahul Verma",
+    "course": "Electronics",
+    "marks": 78
+  }
+]

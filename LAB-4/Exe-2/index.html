@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Indian Product Search</title>
+<style>
+body{
+  font-family: Arial;
+  margin:0;
+  background:#f4f4f4;
+}
+.header{
+  background: linear-gradient(to right,#ff9933,white,#138808);
+  padding:20px;
+  text-align:center;
+  font-size:24px;
+  font-weight:bold;
+}
+.search-box{
+  text-align:center;
+  margin:20px;
+}
+input{
+  padding:12px;
+  width:350px;
+  border:2px solid #138808;
+  border-radius:25px;
+  font-size:16px;
+}
+#results{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  padding:20px;
+}
+.card{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  border-top:5px solid #ff9933;
+  box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+.price{
+  color:#ff5722;
+  font-weight:bold;
+}
+.category{
+  color:gray;
+  font-size:14px;
+}
+.loader{
+  text-align:center;
+  display:none;
+  font-weight:bold;
+  color:#ff5722;
+}
+.no-result{
+  text-align:center;
+  color:red;
+  font-size:18px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">Live Product Search</div>
+
+<div class="search-box">
+<input type="text" id="search" placeholder="Search any product...">
+</div>
+
+<div class="loader" id="loader">Loading...</div>
+<div id="results"></div>
+
+<script>
+const searchInput = document.getElementById("search");
+const results = document.getElementById("results");
+const loader = document.getElementById("loader");
+
+let timer;
+
+searchInput.addEventListener("keyup",()=>{
+  clearTimeout(timer);
+  timer = setTimeout(searchProducts,500);
+});
+
+function searchProducts(){
+  const query = searchInput.value.toLowerCase();
+  loader.style.display="block";
+  results.innerHTML="";
+
+  fetch("products.json")
+  .then(res=>{
+    if(!res.ok) throw new Error("Error fetching data");
+    return res.json();
+  })
+  .then(data=>{
+    loader.style.display="none";
+
+    const filtered = data.products.filter(p =>
+      p.name.toLowerCase().includes(query)
+    );
+
+    if(filtered.length === 0){
+      results.innerHTML = `<div class="no-result">No results found</div>`;
+      return;
+    }
+
+    filtered.forEach(p=>{
+      results.innerHTML += `
+        <div class="card">
+          <h3>${p.name}</h3>
+          <p class="price">₹ ${p.price}</p>
+          <p class="category">${p.category}</p>
+        </div>
+      `;
+    });
+  })
+  .catch(()=>{
+    loader.style.display="none";
+    results.innerHTML=`<div class="no-result">Network Error</div>`;
+  });
+}
+</script>
+
+</body>
+</html>

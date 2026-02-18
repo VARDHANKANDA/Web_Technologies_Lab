@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Management</title>
+<style>
+body {
+  font-family: Arial;
+  background:#1e1e1e;
+  color:white;
+  padding:30px;
+}
+input, button {
+  padding:8px;
+  margin:5px;
+}
+button {
+  background:#ff5722;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+table {
+  width:100%;
+  margin-top:20px;
+  border-collapse: collapse;
+}
+th, td {
+  border:1px solid #444;
+  padding:10px;
+}
+th {
+  background:#ff5722;
+}
+.message { margin-top:10px; }
+</style>
+</head>
+<body>
+
+<h2>Student Management</h2>
+
+<input id="id" placeholder="ID">
+<input id="name" placeholder="Name">
+<input id="dept" placeholder="Department">
+<input id="marks" placeholder="Marks">
+<button onclick="addStudent()">Add</button>
+
+<div class="message" id="msg"></div>
+
+<table>
+<thead>
+<tr>
+<th>ID</th><th>Name</th><th>Dept</th><th>Marks</th><th>Action</th>
+</tr>
+</thead>
+<tbody id="studentTable"></tbody>
+</table>
+
+<script>
+let students = [];
+
+function addStudent(){
+  const id = document.getElementById("id").value;
+  const name = document.getElementById("name").value;
+  const dept = document.getElementById("dept").value;
+  const marks = document.getElementById("marks").value;
+
+  if(!id || !name) return alert("Fill required fields");
+
+  students.push({id,name,dept,marks});
+  document.getElementById("msg").textContent="Student Added Successfully (200)";
+  renderTable();
+}
+
+function renderTable(){
+  const table = document.getElementById("studentTable");
+  table.innerHTML="";
+  students.forEach((s,index)=>{
+    table.innerHTML += `
+    <tr>
+    <td>${s.id}</td>
+    <td>${s.name}</td>
+    <td>${s.dept}</td>
+    <td>${s.marks}</td>
+    <td>
+      <button onclick="deleteStudent(${index})">Delete</button>
+    </td>
+    </tr>`;
+  });
+}
+
+function deleteStudent(index){
+  if(students[index]){
+    students.splice(index,1);
+    document.getElementById("msg").textContent="Student Deleted (200)";
+    renderTable();
+  } else {
+    document.getElementById("msg").textContent="Student Not Found (404)";
+  }
+}
+</script>
+
+</body>
+</html>

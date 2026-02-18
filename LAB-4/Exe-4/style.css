@@ -1,0 +1,123 @@
+/* Animated Background */
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(-45deg, #ff512f, #dd2476, #1e3c72, #2a5298);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color:white;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main Card */
+.container{
+    width:420px;
+    padding:35px;
+    border-radius:20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    text-align:center;
+    transition:0.3s ease;
+}
+
+.container:hover{
+    transform: scale(1.02);
+}
+
+/* Title */
+h2{
+    margin-bottom:20px;
+    letter-spacing:1px;
+}
+
+/* Input */
+input{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus{
+    box-shadow:0 0 10px #ffffff;
+}
+
+/* Suggestions Dropdown */
+#suggestions{
+    margin-top:5px;
+    background:white;
+    color:black;
+    border-radius:10px;
+    max-height:180px;
+    overflow-y:auto;
+    text-align:left;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.suggestion-item{
+    padding:12px;
+    cursor:pointer;
+    border-bottom:1px solid #eee;
+    transition:0.2s;
+}
+
+.suggestion-item:last-child{
+    border-bottom:none;
+}
+
+.suggestion-item:hover{
+    background:#f3f3f3;
+    padding-left:18px;
+}
+
+/* Loading Spinner */
+.loader{
+    display:none;
+    margin:15px auto;
+    border:5px solid rgba(255,255,255,0.3);
+    border-top:5px solid white;
+    border-radius:50%;
+    width:35px;
+    height:35px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100% { transform: rotate(360deg); }
+}
+
+/* Weather Result Card */
+.result{
+    margin-top:20px;
+    padding:15px;
+    border-radius:15px;
+    background: rgba(255,255,255,0.2);
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.result h3{
+    margin-bottom:10px;
+}
+
+.result p{
+    margin:6px 0;
+    font-size:15px;
+}
+
+.error{
+    color:yellow;
+    font-weight:bold;
+}

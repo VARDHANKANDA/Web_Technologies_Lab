@@ -1,0 +1,2 @@
+Hello, this is the initial content of the file.
+This is additional data appended to the file.
